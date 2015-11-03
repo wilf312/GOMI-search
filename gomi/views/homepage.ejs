@@ -1,21 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTML5リファレンス</title>
-</head>
-<body>
+
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    padding: 15px 5px 15px 10px;
+    line-height: 2em;
+    font-size: 15px;
+    position: relative;
+}
+
+li:nth-child(2n-1) {
+    background-color: #f0f0f0;
+}
+
+.title {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #888;
+}
+.fractionation {
+    font-size: 10px;
+    line-height: 2.5em;
+    margin: 0 10px;
+    padding: 2px;
+    background-color: #FDB5B5;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+
+}
+.howtodispose {
+
+}
+.info {
+
+}
+
+</style>
+
+<p>
+検索
+<input v-model="search">
+</p>
 
 <ul>
-    <li v-for="message in messages">
-        <span>{{ message.body }}</span>
+    <li v-for="message in messages  | filterBy search in 'title' ">
+        <p>
+            <span class="title">{{ message.title }}</span>
+            <span class="fractionation">{{ message.fractionation }}</span>
+        </p>
+        <span class="howtodispose">{{ message.howtodispose }}</span>
+        <span class="info">{{ message.info }}</span>
     </li>
 </ul>
 
 
-<input v-model="newMessage.body" v-on:keyup.enter="create" placeholder='メッセージ (Enter で投稿)'>
+<p id="test" style="display:none"><% include json %></p>
 
 
-</body>
-</html>
+
