@@ -1,0 +1,19 @@
+{
+  "name": "gomi-search",
+  "version": "1.0.0",
+  "description": "gomi-search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilf312/GOMI-search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilf312/GOMI-search/issues"
+  },
+  "homepage": "https://github.com/wilf312/GOMI-search#readme"
+}

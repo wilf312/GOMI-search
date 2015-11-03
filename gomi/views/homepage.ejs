@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTML5リファレンス</title>
+</head>
+<body>
+
+<ul>
+    <li v-for="message in messages">
+        <span>{{ message.body }}</span>
+    </li>
+</ul>
+
+
+<input v-model="newMessage.body" v-on:keyup.enter="create" placeholder='メッセージ (Enter で投稿)'>
+
+
+</body>
+</html>
