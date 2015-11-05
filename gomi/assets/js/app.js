@@ -18,7 +18,7 @@ var app = new Vue({
     _this.messages = [
     ];
 
-    var text = document.getElementById('test').innerHTML;
+    var text = document.getElementById('json').innerHTML;
     _this.messages = JSON.parse( text );
 
   },
