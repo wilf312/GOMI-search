@@ -25,7 +25,7 @@ module.exports = function sendOK (data, options) {
 
   // If appropriate, serve data as JSON(P)
   if (req.wantsJSON) {
-    return res.jsonx(data);
+    return res.json(data);
   }
 
   // If second argument is a string, we take that to mean it refers to a view.

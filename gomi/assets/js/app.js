@@ -18,8 +18,25 @@ var app = new Vue({
     _this.messages = [
     ];
 
-    var text = document.getElementById('json').innerHTML;
-    _this.messages = JSON.parse( text );
+    window.addEventListener("load", function(){
+
+        var request = window.superagent;
+
+        request
+            .get('/data/json')
+            .set('Accept', 'application/json')
+            .end(function(err, res){
+                // console.log('res -> ', res);
+                // console.log('err -> ', err);
+                if (err == null) {
+                    _this.messages = JSON.parse(res.text);
+                    // console.log(JSON.parse(res.text));
+                }
+            });
+
+
+    }, false);
+
 
   },
 
